@@ -16,7 +16,8 @@ subgraph cluster_1 {
 
   node [shape=box];
   dbaas [shape=record, label="<f0> uwsgi |<f2> MyDB"];
-  mydb_admin [label="PostgreSQL\nmydb_admin\nPort 32009", style=filled, fillcolor=lightblue, color=black];
+  mydb_admin [label="PostgreSQL\nmydb_admin\nPort 32009", 
+              style=filled, fillcolor=lightblue, color=black];
   {rank = same; dbaas; mydb_admin; }
   db1 [label="PostgreSQL\nPort 32010", style=filled, fillcolor=lightblue, color=black];
   db2 [label="MariaDB\nPort 32011", style=filled, fillcolor=coral1, color=black];
@@ -28,6 +29,7 @@ subgraph cluster_1 {
   nginx -> dbaas:f0; 
 
   edge [dir=forward]
+  splines = false
   dbaas:f2:s -> mydb_admin;
 
   dbaas:f2 -> db4

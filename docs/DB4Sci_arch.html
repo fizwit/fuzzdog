@@ -24,10 +24,6 @@
 <text text-anchor="middle" x="134" y="-124.8" font-family="Times,serif" font-size="14.00">nginx</text>
 <text text-anchor="middle" x="134" y="-109.8" font-family="Times,serif" font-size="14.00">Container</text>
 </g>
-<!-- Users&#45;&gt;nginx -->
-<g id="edge7" class="edge"><title>Users&#45;&gt;nginx</title>
-<path fill="none" stroke="black" d="M62.3033,-121C73.4596,-121 86.1904,-121 97.746,-121"/>
-</g>
 <!-- dbaas -->
 <g id="node2" class="node"><title>dbaas</title>
 <polygon fill="none" stroke="black" points="223.5,-86 223.5,-132 278.5,-132 278.5,-86 223.5,-86"/>
@@ -42,21 +38,11 @@
 <text text-anchor="middle" x="251" y="-185.3" font-family="Times,serif" font-size="14.00">mydb_admin</text>
 <text text-anchor="middle" x="251" y="-170.3" font-family="Times,serif" font-size="14.00">Port 32009</text>
 </g>
-<!-- dbaas&#45;&gt;mydb_admin -->
-<g id="edge2" class="edge"><title>dbaas:f2:s&#45;&gt;mydb_admin</title>
-<path fill="none" stroke="black" d="M257.462,-160.914C258.02,-149.709 257.767,-137.052 256.704,-127.161"/>
-<polygon fill="black" stroke="black" points="253.958,-160.836 256.678,-171.075 260.937,-161.374 253.958,-160.836"/>
-</g>
 <!-- db1 -->
 <g id="node4" class="node"><title>db1</title>
 <polygon fill="lightblue" stroke="black" points="417.5,-54 332.5,-54 332.5,-16 417.5,-16 417.5,-54"/>
 <text text-anchor="middle" x="375" y="-38.8" font-family="Times,serif" font-size="14.00">PostgreSQL</text>
 <text text-anchor="middle" x="375" y="-23.8" font-family="Times,serif" font-size="14.00">Port 32010</text>
-</g>
-<!-- dbaas&#45;&gt;db1 -->
-<g id="edge6" class="edge"><title>dbaas:f2&#45;&gt;db1</title>
-<path fill="none" stroke="black" d="M280,-97C280.443,-97 310.581,-77.0826 336.611,-59.8257"/>
-<polygon fill="black" stroke="black" points="338.832,-62.552 345.232,-54.1079 334.963,-56.7184 338.832,-62.552"/>
 </g>
 <!-- db2 -->
 <g id="node5" class="node"><title>db2</title>
@@ -64,36 +50,17 @@
 <text text-anchor="middle" x="375" y="-94.8" font-family="Times,serif" font-size="14.00">MariaDB</text>
 <text text-anchor="middle" x="375" y="-79.8" font-family="Times,serif" font-size="14.00">Port 32011</text>
 </g>
-<!-- dbaas&#45;&gt;db2 -->
-<g id="edge5" class="edge"><title>dbaas:f2&#45;&gt;db2</title>
-<path fill="none" stroke="black" d="M280,-97C294.738,-97 310.749,-96.2564 325.311,-95.2927"/>
-<polygon fill="black" stroke="black" points="325.892,-98.7603 335.618,-94.5596 325.395,-91.7779 325.892,-98.7603"/>
-</g>
 <!-- db3 -->
 <g id="node6" class="node"><title>db3</title>
 <polygon fill="lightgreen" stroke="black" points="414,-166 336,-166 336,-128 414,-128 414,-166"/>
 <text text-anchor="middle" x="375" y="-150.8" font-family="Times,serif" font-size="14.00">Mongo</text>
 <text text-anchor="middle" x="375" y="-135.8" font-family="Times,serif" font-size="14.00">Port 32012</text>
 </g>
-<!-- dbaas&#45;&gt;db3 -->
-<g id="edge4" class="edge"><title>dbaas:f2&#45;&gt;db3</title>
-<path fill="none" stroke="black" d="M280,-97C291.969,-97 315.882,-109.795 336.594,-122.439"/>
-<polygon fill="black" stroke="black" points="334.89,-125.501 345.229,-127.812 338.587,-119.558 334.89,-125.501"/>
-</g>
 <!-- db4 -->
 <g id="node7" class="node"><title>db4</title>
 <polygon fill="#66b245" stroke="black" points="414,-222 336,-222 336,-184 414,-184 414,-222"/>
 <text text-anchor="middle" x="375" y="-206.8" font-family="Times,serif" font-size="14.00">Neo4j</text>
 <text text-anchor="middle" x="375" y="-191.8" font-family="Times,serif" font-size="14.00">Port 32013</text>
-</g>
-<!-- dbaas&#45;&gt;db4 -->
-<g id="edge3" class="edge"><title>dbaas:f2&#45;&gt;db4</title>
-<path fill="none" stroke="black" d="M280,-97C321.664,-97 302.539,-145.539 332,-175 332.775,-175.775 333.574,-176.54 334.393,-177.296"/>
-<polygon fill="black" stroke="black" points="332.278,-180.089 342.199,-183.806 336.761,-174.713 332.278,-180.089"/>
-</g>
-<!-- nginx&#45;&gt;dbaas -->
-<g id="edge1" class="edge"><title>nginx&#45;&gt;dbaas:f0</title>
-<path fill="none" stroke="black" d="M170.135,-121C185.981,-121 204.932,-121 222,-121"/>
 </g>
 </g>
 </svg>
