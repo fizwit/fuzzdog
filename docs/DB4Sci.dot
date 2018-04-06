@@ -12,7 +12,7 @@ subgraph cluster_1 {
   color = black;
   style = "filled,rounded";
   fillcolor = "#0db7ed";
-  edges=none   # Use Straight Lines
+  splines = false
 
   node [shape=box];
   dbaas [shape=record, label="<f0> uwsgi |<f2> MyDB"];
@@ -29,7 +29,6 @@ subgraph cluster_1 {
   nginx -> dbaas:f0; 
 
   edge [dir=forward]
-  splines = false
   dbaas:f2:s -> mydb_admin;
 
   dbaas:f2 -> db4
