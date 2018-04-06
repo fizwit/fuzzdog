@@ -3,8 +3,8 @@ digraph DB4Sci_Arch {
  fontname="Helvetica";
 
 subgraph outside {
- fontname="Helvetica";
-  https [shape=circle]
+  fontname="Helvetica";
+  Users [shape=circle]
 }
 
 subgraph cluster_1 {
@@ -12,6 +12,7 @@ subgraph cluster_1 {
   color = black;
   style = "filled,rounded";
   fillcolor = "#0db7ed";
+  edges=none   # Use Straight Lines
 
   node [shape=box];
   dbaas [shape=record, label="<f0> uwsgi |<f2> MyDB"];
@@ -22,7 +23,8 @@ subgraph cluster_1 {
   db3 [label="Mongo\nPort 32012", style=filled, fillcolor=lightgreen, color=black];
   db4 [label="Neo4j\nPort 32013", style=filled, fillcolor="#66B245", color=black];
  
-  nginx [label="nginx\nContainer", style=filled, fillcolor=green];
+  nginx [label="nginx\nContainer", style=filled, fillcolor=teal];
+  edge [dir=none]
   nginx -> dbaas:f0; 
 
   edge [dir=forward]
@@ -34,6 +36,6 @@ subgraph cluster_1 {
   dbaas:f2 -> db1
   }
 
-edge [dir=both]
-https -> nginx; 
+edge [dir=none]
+Users -> nginx; 
 }
