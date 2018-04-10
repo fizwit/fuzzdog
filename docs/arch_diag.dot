@@ -7,22 +7,28 @@ subgraph outside {
   Users [shape=circle]
 }
 
+subgraph adauth {
+  fontname="Helvetica";
+  adauth [label="AD Auth", shape=circle]
+}
+
 subgraph cluster_1 {
   label="docker"; lablelloc=t; labeljust=left; fontsize=30;
   color = black;
   style = "filled,rounded";
   fillcolor = "#0db7ed";
-  splines = false
+  #splines = false
+  #splines=line
 
   node [shape=box];
-  dbaas [shape=record, label="<f0> uwsgi |<f2> MyDB"];
+  dbaas [shape=record, label="<f0> uwsgi |<f2> DB4Sci\nFlask"];
   mydb_admin [label="PostgreSQL\nmydb_admin\nPort 32009", 
               style=filled, fillcolor=lightblue, color=black];
   {rank = same; dbaas; mydb_admin; }
-  db1 [label="PostgreSQL\nPort 32010", style=filled, fillcolor=lightblue, color=black];
-  db2 [label="MariaDB\nPort 32011", style=filled, fillcolor=coral1, color=black];
-  db3 [label="Mongo\nPort 32012", style=filled, fillcolor=lightgreen, color=black];
-  db4 [label="Neo4j\nPort 32013", style=filled, fillcolor="#66B245", color=black];
+  db1 [width=1.3,label="PostgreSQL\nPort 32010", style=filled, fillcolor=lightblue, color=black];
+  db2 [width=1.3,label="MariaDB\nPort 32011", style=filled, fillcolor=coral1, color=black];
+  db3 [width=1.3,label="Mongo\nPort 32012", style=filled, fillcolor=lightgreen, color=black];
+  db4 [width=1.3,label="Neo4j\nPort 32013", style=filled, fillcolor="#66B245", color=black];
  
   nginx [label="nginx\nContainer", style=filled, fillcolor=teal];
   edge [dir=none]
@@ -39,4 +45,5 @@ subgraph cluster_1 {
 
 edge [dir=none]
 Users -> nginx; 
+adauth -> dbaas;
 }
