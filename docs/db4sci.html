@@ -36,17 +36,35 @@ DB4Sci is a fully containerized Flask application.
 </p>
 
 <p>
-Scientist should be doing science not IT. Create a new DB instance in seconds without submitting a help desk ticket. MyDB create screen is beautiful and much easier to use than a ticket system to request IT help. MyDB will take care of all the backups.
+DB4Sci was designed provide nimble, friction-less service to facilitate the center's research and administration.
+We wanted to make it easy to create a database and to promote database usage for scientific computing.
+</p>
 
-Why MyDB? Performs complex configuration of Containers. 
-MyDB can deploy MariaDB with encryption at rest enabled and TLS configured.
-Reply PostgreSQL with multi core parallelization enabled.
-Neo4j is deployed in secure mode with https enabled and configured.
-Reply MariaDB in secure mode.
+<p>
+Users do not have to worry about protecting their data.
+DB4SCI preforms native database backups for containers. 
+Backups are kept on-site and replicated to Amazon S3 storage.
+</p>
 
-Performance MyDB Postscript performance is better than AWS XX.  Its the fastest DB we have benched marked.  Why build something that is slow?  Hardware is cheap our local instance has a few hundred TB of Mvme SSD storage.
+<p>
+DB4SCI offers popular database deplyment options like; configuring MariaDB with encryption at rest enabled and TLS configured. 
+Configure PostgreSQL with multicore parallelization enabled.
+Neo4j is deployed in secure mode with https enabled.  MongoDB is configured with authentication.
+</p>
 
-Support Multiple Storage Types:  Mount what ever storage you want to MyDB. From the create screen give users the choice to choose storage types. Access to storage types can me managed by DB type and user id. To support encryption at rest for Postgres we provision an Ext4 encrypted filesystem which is limited to PostgeSQL databases.
+<p>
+DB4SCI can be very performat if it is deployed on high-end hardware. Why build something that is slow?
+Our local deplyment uses NVMe Storage. DB4SCI can be depolyed with Docker Swarm to provide a highly relable and scalable
+database service. 
+</p>
+
+<p>
+DB4SCI supports multiple storage volumes. Databases can be configured on differernt storage platforms to
+support production or develeopment. 
+From the create screen users give users the choice to choose storage types.
+Access to storage types can me managed by database type and user id.
+Multi volume support has allowed us to offer encryption at rest for Postgres by providing an encrypted filesystem as a storage option.
+</p>
 
 </div> <!-- boxed-group -->
 </div> <!-- boxed-group -->
