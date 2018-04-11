@@ -1,61 +1,31 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.ico">
     <title>DB4Sci</title>
-    <style>
-      body {font-family: Helvetica,Arial,"Calibri","Lucida Grande",sans-serif;}
-      .logo { padding: 15px 25px 10px 15px;}
-      .app_name {font-size: 2.5em; font-weight: bold; margin: 0 10px .5em 20px; }
-      #text {padding: 2px 0px 2px 8px;}
-      #footer { 
-          height: 40px; 
-          position: fixed; 
-          bottom:0%;
-          width:100%;
-          color: #fff;
-          background-color: #393838; 
-          opacity: 1;
-      }
-.app_name {
-    color: #89c348;  /* Hutch Green */
-    font-family: "Calibri",Helvetica,Arial,"Lucida Grande",sans-serif;
-    font-size: 1.5em;
-    margin: 0 10px .5em 20px;
-}
-.banner_title {
-    color: #89c348;
-    font-size: 3em;
-}
-.outerbox { # top, right, bottom, left
-   display: block;
-   padding: 0px 12px 0px 12px;
-}
-.boxed-group {
-margin-bottom: 10px;
-    border: 1px solid #dfe2e5;
-    border-radius: 8px;
-    position: relative;
-    padding: 0px 1em 1em 12px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-    </style>
-</head>
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
 <body>
-<div>
-  <header class="app_name">
-    <table>
-      <tr>
-        <td class="logo"> <img src=images/FredHutch_h_tag_4col_RBG_tm.png title="Fred Hutch"></td>
-        <td><h1 class="banner_title">[DB4Sci]</h1></td>
-      </tr>
-    </table>
-  </header>
-</div>
-
+  <div>
+    <header class="app_name">
+      <table>
+        <tr>
+          <td class="logo"> <img src="images/DB4SCI_logo_100px.jpg" title="Fred Hutch"></td>
+        </tr>
+      </table>
+    </header>
+  </div>
+  <nav>
+   <ul class="nav">
+     <li><a href="DB4SCI.html">Home</a></li>
+     <li><a href="overview.html">Overview</a>
+     <li ><a href="db4sci_arch.html">Architecture</a></li>
+     <li ><a href="download.html">Download</a></li>
+   </ul>
+  </nav> <!-- end "nav" -->
 <div class="outerbox">
-<h3>DB4Sci</h3>
 <div id="content" class="boxed-group">
 <p>
 DB4Sci is an easy to use web-based self service database deployment application. 
@@ -77,8 +47,6 @@ Reply MariaDB in secure mode.
 Performance MyDB Postscript performance is better than AWS XX.  Its the fastest DB we have benched marked.  Why build something that is slow?  Hardware is cheap our local instance has a few hundred TB of Mvme SSD storage.
 
 Support Multiple Storage Types:  Mount what ever storage you want to MyDB. From the create screen give users the choice to choose storage types. Access to storage types can me managed by DB type and user id. To support encryption at rest for Postgres we provision an Ext4 encrypted filesystem which is limited to PostgeSQL databases.
-
-<a href="arch_page.html">Application Archecture</a>
 
 </div> <!-- boxed-group -->
 </div> <!-- boxed-group -->
