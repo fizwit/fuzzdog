@@ -1,6 +1,5 @@
 digraph DB4Sci_Arch {
  rankdir=LR;
- splines = "line"
  fontname="Helvetica";
 
 subgraph cluster_0 {
@@ -19,9 +18,10 @@ subgraph cluster_1 {
   style = "filled,rounded";
   fillcolor = "#E7E6E6";
   #splines = false
+  #splines=line
 
   node [shape=box];
-  dbaas [shape=record, label="<f0> uwsgiZ|<f2> DB4Sci\nFlask",
+  dbaas [shape=record, label="<f0> uwsgi |<f2> DB4Sci\nFlask",
          style=filled, fillcolor="#89c348"];
   mydb_admin [label="PostgreSQL\nmydb_admin", 
               style=filled, fillcolor=lightblue, color=black];
@@ -32,15 +32,16 @@ subgraph cluster_1 {
   db4 [width=1.3,label="Neo4j", style=filled, fillcolor="#548235", color=black];
  
   nginx [label="nginx\nContainer", style=filled, fillcolor="#187d80"];
-
   edge [dir=none]
   nginx -> dbaas:f0; 
-  dbaas:f0 -> mydb_admin;
 
-  dbaas:f2 -> db4:w
-  dbaas:f2 -> db3:w
-  dbaas:f2 -> db2:w
-  dbaas:f2 -> db1:w
+  edge [dir=none]
+  dbaas:f2:s -> mydb_admin;
+
+  dbaas:f2 -> db4
+  dbaas:f2 -> db3
+  dbaas:f2 -> db2
+  dbaas:f2 -> db1:e
   }
 
   edge [dir=none]
