@@ -14,7 +14,7 @@ subgraph cluster_1 {
 }
 
 subgraph cluster_1 {
-  label="docker"; lablelloc=t; labeljust=left; fontsize=30;
+  label="  docker"; lablelloc=t; labeljust=left; fontsize=30;
   color = black;
   style = "filled,rounded";
   fillcolor = "#E7E6E6";
