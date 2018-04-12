@@ -27,15 +27,29 @@
    </ul>
 </nav> <!-- end "nav" -->
 <div class="outerbox">
-        <div id="content" class="boxed-group">
-<br>
-<pr>
-DB4Sci is easily extensible. At present MyDB supports four major DB platforms.  To add additional platforms just update the configuration file and define the Name, image and version of the DB container.  On the backend you need to write Python code to implement a few methods: db_create, db_backup, create_user, check_user.
-<img src="arch_diag.svg" alt="DB4SCI Architecture">
+  <div id="content" class="boxed-group">
+    <img src="arch_diag.svg" alt="DB4SCI Architecture">
+    <p>
+    <ul style="list-style-type:square">
+       <li>Access to DB4SCI requires user authentication. Acitve Directory is used to provide
+            authentication.
+       <li>NginX handles http and TSL transports and sends data via WSGI to flash 
+           on port 5000</li>
+       <li>uWSGI is used as a wrapper for DB4SCI flask application.</li> 
+       <li>State data for the application is stored in a PostgreSQL 
+                database named mydb_admin.
+                SQLAlchemy for Flask is the API to PostgreSQL for the administrative database.
+                Metadata about each database request is kept in the admin database.
+                Information about the requester, backup policiy and container information are kept. 
+       <li>There is enough metadata in the admin database to recreate the Docker container.
+           The admin database knows the location and timestamps for the database backups.
+       </li>
+       <li>Each database created by DB4SCI gives the requester full administrative privileges. 
+           Each database has its own unique storage and network port.   
   </div>
 </div>
   <div id="footer">
-    <p id=text>hand crafted html with vim</p>
+    <p id=text>Fred Hutchenson Cancer Research Center</p>
   </div>
 </body>
 </html> 
