@@ -19,8 +19,8 @@ subgraph cluster_1 {
   fillcolor = "#E7E6E6";
 
   node [shape=box];
-  dbaas [shape=record, label="<f0> uwsgiZ|<f2> DB4Sci\nFlask",
-         style=filled, fillcolor="#89c348", dir = back];
+  dbaas [shape=record, label="<f0> uwsgi|<f2> DB4Sci\nFlask",
+         style=filled, fillcolor="#89c348"];
 
   mydb_admin [label="PostgreSQL\nmydb_admin", 
               style=filled, fillcolor=lightblue, color=black];

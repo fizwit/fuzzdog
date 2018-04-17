@@ -36,7 +36,7 @@
 <!-- dbaas -->
 <g id="node3" class="node"><title>dbaas</title>
 <polygon fill="#89c348" stroke="black" points="244.831,-110 244.831,-168 305.169,-168 305.169,-110 244.831,-110"/>
-<text text-anchor="middle" x="275" y="-152.8" font-family="Times,serif" font-size="14.00">uwsgiZ</text>
+<text text-anchor="middle" x="275" y="-152.8" font-family="Times,serif" font-size="14.00">uwsgi</text>
 <polyline fill="none" stroke="black" points="244.831,-146 305.169,-146 "/>
 <text text-anchor="middle" x="275" y="-130.8" font-family="Times,serif" font-size="14.00">DB4Sci</text>
 <text text-anchor="middle" x="275" y="-116.8" font-family="Times,serif" font-size="14.00">Flask</text>
